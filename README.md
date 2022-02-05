@@ -20,12 +20,12 @@ EthSema can translate existing EVM bytecode to eWASM smart contracts which can b
 | [EVMJIT](https://github.com/ethereum/evmjit)         | yes      | partially | incorrect | incorrect | no       |
 | EthSema                                              | yes      | fully     | fully     | fully     | yes      |
 
-- The binary translators, evm2wasm and EVMJIT target on lifting EVM bytecode to eWASM bytecode, but their lifted semantic from bytecode is incomplete, thus failing to support R1. 
+- The binary translators, evm2wasm and EVMJIT target on lifting EVM bytecode to eWASM bytecode, but their lifted semantic from bytecode is incomplete, thus failing to support R1. 
   - evm2wasm [34] follows a template-based strategy to generate eWASM contracts according to a set of patterns. However, our experiments show that it only generates a WebAssembly template without filling any logic code. 
   - EVMJIT [9] aims to lift EVM bytecode to LLVM IR [52], however, it fails to lift the basic blocks that contain indirect jumps because their destinations are determined at runtime. 
-  - Moreover, neither evm2wasm nor EVMJIT fully support EEI and ECI, thus failing to support R2.
+  - Moreover, neither evm2wasm nor EVMJIT fully support EEI and ECI, thus failing to support R2.
 - tools like Solang [44] and SOLL [64] need the source code of smart contracts, but most of deployed contracts are closed-source.
-  - Moreover, they only support some basic grammar like if-else-then branches without handling advanced features such as inline assembly and library contracts, and they just partially follow ECI so that smart contracts cannot initiate themselves during deployment. Hence, they fail to support R1 and R2
+  - Moreover, they only support some basic grammar like if-else-then branches without handling advanced features such as inline assembly and library contracts, and they just partially follow ECI so that smart contracts cannot initiate themselves during deployment. Hence, they fail to support R1 and R2
 
 ## Current Status 
 
@@ -110,7 +110,7 @@ contract reEntrancy {
 
 
 
-## Translate to eWASM
+## Translate EVM bytecode to eWASM
 
 - EVM bytecode
 
