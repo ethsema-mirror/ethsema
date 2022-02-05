@@ -6,7 +6,7 @@ Since millions of smart contracts have been deployed and running on Ethereum 1.0
 
 - **R1-Correctness:** it should generate eWASM contracts with consistent behaviors as EVM contracts. 
 - **R2-Compatibility:** the generated eWASM contracts should be compatible with EEI and ECI for successful execution. 
-- **R3-Extensibility:** it should be extensible to support improvements to the created eWASM contracts (e.g., bug fixing).
+- **R3-Extensibility:** it should be extensible to support improvements to the created eWASM contracts (e.g., bug fixing).
 
 EthSema can translate existing EVM bytecode to eWASM smart contracts which can be executed in the Ethereum 2.0 ecosystem. To evaluate whether the generated eWASM contracts are in consistent with the original EVM contracts, we download their real-world transactions from the Ethereum blockchain, replay them on our testnet, and compare the traces of the EVM transactions and eWASM transactions. The experimental demonstrate that EthSema can ensure the semantic correctness of the converted eWASM contracts. 
 
