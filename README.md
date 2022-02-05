@@ -33,7 +33,7 @@ EthSema can translate existing EVM bytecode to eWASM smart contracts which can b
 
 **Real-world Benchmark:** We collect 1,983 real-world EVM bytecode from [Etherscan](https://etherscan.io/). The below figure shows the profile of each smart contract, where the x-axis is the Solidity version and the y-axis is the size of source code. These contracts have 741 LOC on average, and the largest one contains over 8,500 LOC. 
 
-<img src="/Users/weiminchen/Documents/Easmit/datasetProfile.png" alt="image-20220205143815196" style="zoom:50%;" />
+<img src="https://github.com/ethsema/ethsema/blob/main/datasetProfile.png" alt="image-20220205143815196" style="zoom:50%;" />
 
 ETHSEMA can successfully convert EVM contracts into eWASM contracts and outperform the Solidity-based baselines.
 
@@ -148,7 +148,7 @@ $ geth --networkid 66 --port 30321 --rpc --rpcaddr "0.0.0.0" --rpcport 8545 --rp
 
 ## Run
 
-![example](/Users/weiminchen/Documents/Easmit/example.gif)
+![example](https://github.com/ethsema/ethsema/blob/main/example.gif)
 
 The below code is an test script, which use an EVM smart contract to exploit the reentrancy vulnerability in the eWASM code.
 
