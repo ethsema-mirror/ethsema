@@ -82,7 +82,7 @@ Currently, we only public the standalone binary.
 
 # Getting Started
 
-Here is an simple example. 
+Here is an simple example, which can be exploited by an reentrancy attacker.
 
 ```solidity
 pragma solidity ^0.8.11;
